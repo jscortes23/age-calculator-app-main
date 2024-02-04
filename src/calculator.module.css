@@ -1,0 +1,129 @@
+@font-face {
+  font-family: 'Poppins Bold';
+  src: url('./assets/fonts/Poppins-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins Italic Bold';
+  src: url('../src/assets/fonts/Poppins-ExtraBoldItalic.ttf') format('truetype');
+}
+
+.container {
+  width: min(100% - 2rem, 44rem);
+  display: grid;
+  margin-inline: auto;
+  padding: 3.2rem 2rem;
+  background-color: var(--white); 
+  border-radius: 1.6rem 1.6rem 28% 1.6rem;
+}
+
+.container__inputs {
+  position: relative;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  column-gap: 1.4rem;
+  border-block-end: .1rem solid var(--light-grey);
+  padding-block-end: 5.2rem;
+}
+
+.container__input {
+  display: flex;
+  row-gap: .4rem;
+  flex-direction: column;
+}
+
+.input__title {
+  font-family: 'Poppins Bold' ,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: .2rem;
+  color: var(--somke-grey);
+  text-transform: uppercase;
+}
+
+.input__number {
+  font-family: 'Poppins Bold' ,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 100%;
+  max-width: 8.6rem;
+  padding: 1.2rem 1.6rem;
+  border: 0.1rem solid var(--light-grey);
+  border-radius: 0.8rem;
+  font-size: 1.8rem;
+  color: var(--off-black);
+  font-weight: 800;
+}
+
+.input__number::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.input__number:hover {
+  border-color: var(--clr-primary);
+  cursor: pointer;
+}
+
+.error {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--light-red);
+}
+
+.error__input {
+  border-color: var(--light-red);
+}
+
+.input__text::placeholder {
+  color: var(--somke-grey);
+  font-weight: 700;
+}
+
+.button {
+  position: absolute;
+  translate: 50% -50%;
+  inset-block-start: 100%;
+  inset-inline-end: 50%;
+  display: flex;
+  align-items: center;
+  padding: 1.6rem;
+  border: none;
+  border-radius: 50%;
+  color: var(--white);
+  background-color: var(--clr-primary);
+  transition: background-color .2s ease-in-out;
+}
+
+.button:hover {
+  background-color: var(--off-black);
+  cursor: pointer;
+}
+
+.icon__arrow__down {
+  display: inline-block;
+  width: 2rem;
+  aspect-ratio: 1;
+  background-image: url('./assets/icon-arrow.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.container__result {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  padding-block-start: 3.8rem;
+}
+
+.result__text {  
+  font-family: 'Poppins Italic Bold' ,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.result__number {
+  color: var(--clr-primary);
+  margin-inline-end: .6rem;
+}
+
